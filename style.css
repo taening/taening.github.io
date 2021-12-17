@@ -34,3 +34,30 @@
 * {
   box-sizing: border-box;
 }
+
+/* Typography */
+/* 웹사이트 전반적으로 쓰여진 텍스트에 대한 스타일링 */
+h1 {
+  font-size: var(--font-size-large);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-black);
+  margin: 16px 0px;
+}
+h2 {
+  font-size: var(--font-size-medium);
+  font-weight: var(--font-weight-semi-bold);
+  color: var(--color-black);
+  margin: 8px 0px;
+}
+h3 {
+  font-size: var(--font-size-regular);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-black);
+  margin: 8px 0px;
+}
+p {
+  font-size: var(--font-size-regular);
+  font-weight: var(--font-weight-regular);
+  color: var(--color-black);
+  margin: 4px 0px;
+}
