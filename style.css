@@ -52,6 +52,13 @@ ul {
   padding-left: 0px;
 }
 
+button {
+  background-color: transparent;
+  cursor: pointer;
+  border: none;
+  outline: none;
+}
+
 /* Typography */
 /* 웹사이트 전반적으로 쓰여진 텍스트에 대한 스타일링 */
 h1 {
@@ -60,18 +67,21 @@ h1 {
   color: var(--color-black);
   margin: 16px 0px;
 }
+
 h2 {
   font-size: var(--font-size-medium);
   font-weight: var(--font-weight-semi-bold);
   color: var(--color-black);
   margin: 8px 0px;
 }
+
 h3 {
   font-size: var(--font-size-regular);
   font-weight: var(--font-weight-regular);
   color: var(--color-black);
   margin: 8px 0px;
 }
+
 p {
   font-size: var(--font-size-regular);
   font-weight: var(--font-weight-regular);
@@ -79,6 +89,7 @@ p {
   margin: 4px 0px;
 }
 
+/* navbar */
 #navbar {
   display: flex;
   justify-content: space-between;
@@ -110,3 +121,46 @@ p {
 .navber__menu__item:hover {
   background-color: var(--color-dark-pink);
 }
+
+/* home */
+#home {
+  background-image: url(imgs/background.png);
+  padding: 40px;
+  text-align: center;
+}
+
+.home__avatar {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 2px solid var(--color-white);
+}
+
+.home__title,
+.home__description {
+  color: var(--color-white);
+}
+
+.home__contact {
+  color: var(--color-white);
+  font-size: var(--font-size-regular);
+  font-weight: var(--font-weight-bold);
+  margin: 24px;
+  padding: 8px 12px;
+  border: 2px solid var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+
+.home__contact:hover {
+  background-color: var(--color-dark-pink);
+}
+
+/* About Me */
+
+/* Skills */
+
+/* My Works */
+
+/* Testimonials */
+
+/* Contact Me */
