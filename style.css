@@ -28,11 +28,28 @@
   --font-weight-regular: 400;
 
   /* Size */
+  --size-border-radius: 4px;
 }
 
 /* Universal Tags */
 * {
   box-sizing: border-box;
+}
+
+body {
+  font-family: "Open Sans", sans-serif;
+  margin: 0px;
+  cursor: default;
+}
+
+a {
+  text-decoration: none;
+  color: var(--color-white);
+}
+
+ul {
+  list-style: none;
+  padding-left: 0px;
 }
 
 /* Typography */
@@ -60,4 +77,36 @@ p {
   font-weight: var(--font-weight-regular);
   color: var(--color-black);
   margin: 4px 0px;
+}
+
+#navbar {
+  display: flex;
+  justify-content: space-between;
+  background-color: var(--color-pink);
+  align-items: center;
+  padding: 8px 0px;
+}
+
+.navbar__logo {
+  font-size: var(--font-size-medium);
+}
+
+.navbar__menu {
+  display: flex;
+  cursor: pointer;
+}
+
+.navber__menu__item {
+  padding: 8px 12px;
+  margin: 0px 4px;
+  color: var(--color-white);
+  border-radius: var(--size-border-radius);
+}
+
+.navber__menu__item.active {
+  border: 1px solid var(--color-white);
+}
+
+.navber__menu__item:hover {
+  background-color: var(--color-dark-pink);
 }
