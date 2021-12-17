@@ -1,0 +1,36 @@
+/* Global Setting */
+/* Web Page 전반에서 사용하는 Color, Font Size, Font 등 정의*/
+:root {
+  /* Color */
+  --color-white: #ffffff;
+  --color-light-white: #eeeeee;
+  --color-dark-white: #bdbdbd;
+  --color-pink: #fe918d;
+  --color-dark-pink: #ff6863;
+  --color-black: #000000;
+  --color-gray: #616161;
+  --color-light-gray: #7c7979;
+  --color-dark-gray: #4d4d4d;
+  --color-blue: #73aace;
+  --color-yellow: #fff7d1;
+  --color-orange: #feb546;
+
+  /* Font size */
+  --font-size-large: 48px;
+  --font-size-medium: 28px;
+  --font-size-regular: 18px;
+  --font-size-small: 16px;
+  --font-size-micro: 14px;
+
+  /* Font weight */
+  --font-weight-bold: 700;
+  --font-weight-semi-bold: 600;
+  --font-weight-regular: 400;
+
+  /* Size */
+}
+
+/* Universal Tags */
+* {
+  box-sizing: border-box;
+}
