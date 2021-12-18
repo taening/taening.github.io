@@ -104,10 +104,12 @@ p {
   background-color: var(--color-pink);
   align-items: center;
   padding: 8px 0px;
+  margin: 24px 24px 0px 24px;
 }
 
 .navbar__logo {
   font-size: var(--font-size-medium);
+  padding: 0px 12px;
 }
 
 .navbar__menu {
@@ -134,6 +136,7 @@ p {
 #home {
   background-image: url(imgs/background.png);
   padding: 40px;
+  margin: 0px 24px;
 }
 
 .home__avatar {
