@@ -29,6 +29,9 @@
 
   /* Size */
   --size-border-radius: 4px;
+
+  /* Animation */
+  --animation-duration: 300ms;
 }
 
 /* Universal Tags */
@@ -57,6 +60,11 @@ button {
   cursor: pointer;
   border: none;
   outline: none;
+}
+
+section {
+  text-align: center;
+  padding-top: 60px;
 }
 
 /* Typography */
@@ -126,7 +134,6 @@ p {
 #home {
   background-image: url(imgs/background.png);
   padding: 40px;
-  text-align: center;
 }
 
 .home__avatar {
@@ -156,6 +163,97 @@ p {
 }
 
 /* About Me */
+#about {
+}
+
+.about__majors {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 12px 80px;
+}
+
+.major {
+  padding: 20px 40px;
+}
+
+.major__icon {
+  width: 200px;
+  height: 200px;
+  line-height: 200px;
+  font-size: 80px;
+  margin: auto;
+  color: var(--color-blue);
+  border: 2px solid var(--color-blue);
+  border-radius: 50%;
+}
+
+.major__title,
+.major__description {
+  color: var(--color-dark-gray);
+}
+
+.major__title {
+  font-size: var(--font-size-medium);
+}
+.major__description {
+  font-size: var(--font-size-regular);
+}
+
+.major:hover .major__icon {
+  color: var(--color-pink);
+  border: 2px solid var(--color-pink);
+}
+
+.major:hover .major__icon i {
+  transform: rotate(8deg) scale(1.1);
+  transition: all var(--animation-duration) ease-out;
+}
+
+.major:hover .major__title,
+.major:hover .major__description {
+  color: var(--color-dark-pink);
+}
+
+.about__division {
+  display: flex;
+  justify-content: center;
+}
+
+.about__division hr {
+  width: 80%;
+  margin: 28px 0px;
+  border-style: dashed;
+}
+
+.about__careers {
+  margin: 12px 80px;
+}
+
+.career {
+  display: flex;
+}
+
+.career__logo {
+  width: 80px;
+  height: 80px;
+  margin: 12px 40px;
+}
+
+.career__description {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  text-align: left;
+}
+
+.career__name {
+  font-size: var(--font-size-regular);
+  font-weight: var(--font-weight-bold);
+}
+.career__period {
+  font-size: var(--font-size-small);
+  font-weight: var(--font-weight-semi-bold);
+}
 
 /* Skills */
 
