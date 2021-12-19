@@ -365,3 +365,19 @@ p {
 /* Testimonials */
 
 /* Contact Me */
+#contact {
+  background-image: url(imgs/background.png);
+  margin: 24px 24px;
+}
+
+#contact > * {
+  color: var(--color-white);
+}
+
+.contact__links {
+  padding: 12px;
+}
+
+.contact__links i {
+  font-size: var(--font-size-large);
+}
