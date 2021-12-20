@@ -363,11 +363,61 @@ p {
 }
 
 /* Testimonials */
+#testimonials {
+  background-color: var(--color-light-white);
+  margin: 0px 24px;
+}
+
+.testimonialset {
+  display: flex;
+  flex-flow: column;
+}
+
+.testimonial {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  margin: 12px;
+}
+
+.testimonial__avatar {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
+}
+
+.testimonial__avatar:nth-child(odd) {
+  margin-right: 40px;
+}
+
+.testimonial__avatar:nth-child(even) {
+  margin-left: 40px;
+}
+
+.testimonial__speech-bubble {
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+  justify-content: space-evenly;
+  background-color: var(--color-white);
+  border-radius: var(--size-border-radius);
+  padding: 12px;
+}
+
+.testimonial__speech-bubble p {
+  color: var(--color-light-gray);
+  font-weight: var(--font-weight-semi-bold);
+}
+
+.testimonial__speech-bubble a {
+  color: var(--color-pink);
+  font-weight: var(--font-weight-bold);
+}
 
 /* Contact Me */
 #contact {
   background-image: url(imgs/background.png);
-  margin: 24px 24px;
+  margin: 0px 24px;
 }
 
 #contact > * {
