@@ -99,6 +99,11 @@ p {
   margin: 4px 0px;
 }
 
+.section__container {
+  max-width: 1400px;
+  margin: auto;
+}
+
 /* navbar */
 #navbar {
   display: flex;
@@ -263,6 +268,7 @@ p {
 /* Skills */
 #skills {
   background-color: var(--color-yellow);
+  margin: 0px 24px;
 }
 
 .skillset {
@@ -358,7 +364,7 @@ p {
 
 .works__projects a:hover {
   background-color: var(--color-dark-white);
-  transform: scale(102%);
+  transform: scale(1.02);
   transition: all var(--animation-duration) ease-out;
 }
 
@@ -420,14 +426,16 @@ p {
   margin: 0px 24px;
 }
 
-#contact > * {
+#contact * {
   color: var(--color-white);
 }
 
 .contact__links {
   padding: 12px;
+  font-size: var(--font-size-large);
 }
 
-.contact__links i {
-  font-size: var(--font-size-large);
+.contact__links i:hover {
+  transform: scale(1.1);
+  transition: all var(--animation-duration) ease-out;
 }
