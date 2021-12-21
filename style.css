@@ -141,7 +141,7 @@ p {
 
 /* home */
 #home {
-  background-image: url(imgs/background.png);
+  background: center/cover url(imgs/background.png);
   padding: 40px;
   margin: 0px 24px;
 }
@@ -475,7 +475,7 @@ p {
 
 /* Contact Me */
 #contact {
-  background-image: url(imgs/background.png);
+  background: center/cover url(imgs/background.png);
   margin: 0px 24px;
 }
 
