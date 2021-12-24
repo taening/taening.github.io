@@ -336,7 +336,7 @@ p {
 
 /* My Works */
 .works__categories {
-  margin: 24px;
+  margin: 12px;
 }
 
 .category__btn {
@@ -344,7 +344,7 @@ p {
   border-radius: var(--size-border-radius);
   font-size: var(--font-size-regular);
   font-weight: var(--font-weight-semi-bold);
-  padding: 8px 40px;
+  padding: 8px 32px;
   margin: 4px 0px;
 }
 
@@ -441,23 +441,31 @@ p {
 
 .testimonial {
   display: flex;
-  flex-flow: row wrap;
+  flex-direction: row;
   justify-content: center;
   margin: 12px;
 }
 
-.testimonial__avatar {
-  width: 160px;
-  height: 160px;
-  border-radius: 50%;
+.testimonial:nth-child(odd) {
+  flex-direction: row;
 }
 
-.testimonial__avatar:nth-child(odd) {
+.testimonial:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+.testimonial:nth-child(odd) > .testimonial__avatar {
   margin-right: 40px;
 }
 
-.testimonial__avatar:nth-child(even) {
+.testimonial:nth-child(even) > .testimonial__avatar {
   margin-left: 40px;
+}
+
+.testimonial__avatar > img {
+  width: 160px;
+  height: 160px;
+  border-radius: 50%;
 }
 
 .testimonial__speech-bubble {
@@ -501,22 +509,76 @@ p {
   transition: all var(--animation-duration) ease-out;
 }
 
-/* 0px ~ 480px Mobile Version */
-@media screen and (max-width: 480px) {
-  .navbar__menu {
-    display: none;
+/* 0px ~ 768px Common Setting */
+@media screen and (max-width: 768px) {
+  section {
+    padding: 50px 12px;
   }
-  .navbar__toggle-btn {
-    display: block;
-  }
-}
 
-/* 481px ~ 768px Tablet Version */
-@media screen and (min-width: 481px) and (max-width: 768px) {
+  /* Navigation Bar */
   .navbar__menu {
     display: none;
   }
+
   .navbar__toggle-btn {
     display: block;
+  }
+
+  /* About Me */
+  .about__majors {
+    flex-direction: column;
+    margin: 8px;
+  }
+
+  .major {
+    padding: 20px 0px;
+  }
+
+  .about__careers {
+    margin: 8px;
+  }
+
+  .career__logo {
+    margin: 16px;
+  }
+
+  /* Skills */
+  .skillset {
+    flex-direction: column;
+    margin: 20px;
+  }
+
+  .skill {
+    margin: 8px 0px;
+  }
+
+  .skillset__right {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .tools,
+  .etc {
+    width: 50%;
+    padding: 20px;
+  }
+
+  /* My Works*/
+  .works__categories {
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+  }
+
+  /* Testimonials */
+  .testimonial:nth-child(odd),
+  .testimonial:nth-child(even) {
+    flex-direction: column;
+  }
+
+  .testimonial:nth-child(odd) > .testimonial__avatar,
+  .testimonial:nth-child(even) > .testimonial__avatar {
+    margin: 0px;
   }
 }
