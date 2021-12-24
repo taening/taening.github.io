@@ -110,7 +110,8 @@ p {
   width: 100%;
   display: flex;
   justify-content: space-between;
-  padding: 8px 24px;
+  align-items: center;
+  padding: 8px 0px;
 }
 
 .navbar__logo {
@@ -139,7 +140,6 @@ p {
 }
 
 .navbar__toggle-btn {
-  position: relative;
   display: none;
   color: var(--color-white);
   font-size: var(--font-size-medium);
@@ -148,9 +148,11 @@ p {
 
 /* home */
 #home {
-  background: center/cover url(imgs/background.png);
-  padding: 100px;
-  margin: 0px 24px;
+  background-image: url(imgs/background.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding-top: 100px;
 }
 
 .home__avatar {
@@ -275,7 +277,6 @@ p {
 /* Skills */
 #skills {
   background-color: var(--color-yellow);
-  margin: 0px 24px;
 }
 
 .skillset {
@@ -431,7 +432,6 @@ p {
 /* Testimonials */
 #testimonials {
   background-color: var(--color-light-white);
-  margin: 0px 24px;
 }
 
 .testimonialset {
@@ -482,8 +482,9 @@ p {
 
 /* Contact Me */
 #contact {
-  background: center/cover url(imgs/background.png);
-  margin: 0px 24px;
+  background-image: url(imgs/background.png);
+  background-position: center;
+  background-size: cover;
 }
 
 #contact * {
