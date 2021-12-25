@@ -145,6 +145,9 @@ p {
 }
 
 .navbar__toggle-btn {
+  position: absolute;
+  right: 0px;
+  top: 12px;
   display: none;
   color: var(--color-white);
   font-size: var(--font-size-medium);
@@ -521,8 +524,14 @@ p {
   }
 
   /* Navigation Bar */
+  #navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
   .navbar__menu {
     display: none;
+    flex-direction: column;
+    padding: 8px 4px;
   }
 
   .navbar__toggle-btn {
@@ -570,7 +579,6 @@ p {
 
   /* My Works*/
   .works__categories {
-    display: flex;
     flex-direction: column;
     width: 80%;
     margin: auto;
