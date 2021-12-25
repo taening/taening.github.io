@@ -14,6 +14,19 @@ const navbarMenu = document.querySelector('.navbar__menu');
 navbarMenu.addEventListener('click', (event)=>{
     const target = event.target;
     const link = target.dataset.link;
-    const element = document.querySelector(link);
-    element.scrollIntoView({ behavior: 'smooth' });
+    if(link == null) {
+        return;
+    }
+    scrollIntoView(link);
 })
+
+/* Section Shifting When Push the Contact Button */
+const contactButton = document.querySelector('.home__contact');
+contactButton.addEventListener('click', ()=>{
+    scrollIntoView('#contact');
+})
+
+function scrollIntoView(selector) {
+    const element = document.querySelector(selector);
+    element.scrollIntoView({ behavior: 'smooth' });
+}
