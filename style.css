@@ -516,13 +516,28 @@ p {
 }
 
 .contact__links {
+  display: flex;
+  justify-content: center;
   padding: 12px;
   font-size: var(--font-size-large);
 }
 
-.contact__links i:hover {
+.contact__links a {
+  padding: 8px;
+  line-height: 20px;
+}
+
+.contact__links a:hover {
   transform: scale(1.1);
   transition: all var(--animation-duration) ease-out;
+}
+
+.link__logo {
+  background-image: url(imgs/contacts/tistory_icon.png);
+  background-position: center;
+  background-size: cover;
+  width: 46.5px;
+  height: 48px;
 }
 
 /* 0px ~ 768px Common Setting */
