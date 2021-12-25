@@ -136,6 +136,7 @@ p {
   margin: 0px 4px;
   color: var(--color-white);
   border-radius: var(--size-border-radius);
+  text-align: center;
 }
 
 .navbar__menu__item.active {
@@ -170,6 +171,10 @@ p {
   height: 250px;
   border-radius: 50%;
   border: 2px solid var(--color-white);
+}
+
+.home__avatar:hover {
+  cursor: pointer;
 }
 
 .home__title,
@@ -530,11 +535,18 @@ p {
   #navbar {
     flex-direction: column;
     align-items: flex-start;
+    background-color: var(--color-pink);
   }
+
   .navbar__menu {
     display: none;
     flex-direction: column;
+    width: 100%;
     padding: 8px 4px;
+  }
+
+  .navbar__menu.open {
+    display: block;
   }
 
   .navbar__toggle-btn {
@@ -544,6 +556,7 @@ p {
   /* About Me */
   .about__majors {
     flex-direction: column;
+    align-items: center;
     margin: 8px;
   }
 

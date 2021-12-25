@@ -1,5 +1,10 @@
 'use strict'
 
+function scrollIntoView(selector) {
+    const element = document.querySelector(selector);
+    element.scrollIntoView({ behavior: 'smooth' });
+}
+
 /* Navigation Bar Color Change */
 const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
@@ -17,6 +22,7 @@ navbarMenu.addEventListener('click', (event)=>{
     if(link == null) {
         return;
     }
+    navbarMenu.classList.remove('open');
     scrollIntoView(link);
 })
 
@@ -26,7 +32,18 @@ contactButton.addEventListener('click', ()=>{
     scrollIntoView('#contact');
 })
 
-function scrollIntoView(selector) {
-    const element = document.querySelector(selector);
-    element.scrollIntoView({ behavior: 'smooth' });
-}
+/* Selected Navigation Bar Menu Border Change (MouseOver Event) */
+navbarMenu.addEventListener('mouseover', (event)=> {
+    event.target.classList.add('active');
+})
+
+/* Selected Navigation Bar Menu Border Change (MouseOut Event) */
+navbarMenu.addEventListener('mouseout', (event)=>{
+    event.target.classList.remove('active');
+})
+
+/* Navigation Bar Toggle Button Event (Mobile Version)*/
+const navbarToggleButton = document.querySelector('.navbar__toggle-btn');
+navbarToggleButton.addEventListener('click', ()=>{
+    navbarMenu.classList.toggle('open');
+})
