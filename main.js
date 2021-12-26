@@ -8,11 +8,11 @@ function scrollIntoView(selector) {
 /* Navigation Bar Color Change */
 const navbar = document.querySelector("#navbar");
 const navbarHeight = navbar.getBoundingClientRect().height;
-window.addEventListener('scroll', ()=>{
+document.addEventListener('scroll', ()=>{
     scrollY > navbarHeight 
     ? navbar.classList.add('navbar--dark') 
     : navbar.classList.remove('navbar--dark');
-})
+});
 
 /* Section Shifting When Push the Navigation Bar Button */
 const navbarMenu = document.querySelector('.navbar__menu');
@@ -24,26 +24,33 @@ navbarMenu.addEventListener('click', (event)=>{
     }
     navbarMenu.classList.remove('open');
     scrollIntoView(link);
-})
+});
 
 /* Section Shifting When Push the Contact Button */
 const contactButton = document.querySelector('.home__contact');
 contactButton.addEventListener('click', ()=>{
     scrollIntoView('#contact');
-})
+});
 
 /* Selected Navigation Bar Menu Border Change (MouseOver Event) */
 navbarMenu.addEventListener('mouseover', (event)=> {
     event.target.classList.add('active');
-})
+});
 
 /* Selected Navigation Bar Menu Border Change (MouseOut Event) */
 navbarMenu.addEventListener('mouseout', (event)=>{
     event.target.classList.remove('active');
-})
+});
 
 /* Navigation Bar Toggle Button Event (Mobile Version)*/
 const navbarToggleButton = document.querySelector('.navbar__toggle-btn');
 navbarToggleButton.addEventListener('click', ()=>{
     navbarMenu.classList.toggle('open');
-})
+});
+
+/* Home Section Contents Transparent When Scroll Down */
+const home = document.querySelector('#home');
+const homeHeight = home.getBoundingClientRect().bottom;
+document.addEventListener('scroll', ()=>{
+    home.querySelector('.section__container').style.opacity = 1 - (scrollY / homeHeight);
+});
