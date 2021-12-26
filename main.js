@@ -54,3 +54,17 @@ const homeHeight = home.getBoundingClientRect().bottom;
 document.addEventListener('scroll', ()=>{
     home.querySelector('.section__container').style.opacity = 1 - (scrollY / homeHeight);
 });
+
+/* Show Arrow Button When Scroll Down */
+const navbarArrowButton = document.querySelector('.navbar__arrow-btn');
+document.addEventListener('scroll', ()=>{
+    if(scrollY > homeHeight / 2)
+        navbarArrowButton.classList.add('visible');
+    else 
+        navbarArrowButton.classList.remove('visible');
+});
+
+/* Section Shifting When Push the Arrow Button */
+navbarArrowButton.addEventListener('click', ()=>{
+    scrollIntoView('#home');
+});
