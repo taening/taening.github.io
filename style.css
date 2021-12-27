@@ -379,6 +379,8 @@ p {
 
 /* My Works */
 .works__categories {
+  display: flex;
+  justify-content: center;
   margin: 12px;
 }
 
@@ -388,7 +390,7 @@ p {
   font-size: var(--font-size-regular);
   font-weight: var(--font-weight-semi-bold);
   padding: 8px 32px;
-  margin: 4px 0px;
+  margin: 4px 2px;
 }
 
 .category__btn.active,
