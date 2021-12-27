@@ -68,3 +68,32 @@ document.addEventListener('scroll', ()=>{
 navbarArrowButton.addEventListener('click', ()=>{
     scrollIntoView('#home');
 });
+
+/* Filtering Project */
+const worksCategories = document.querySelector('.works__categories');
+const worksProjects = document.querySelector('.works__projects');
+const projects = document.querySelectorAll('.project');
+worksCategories.addEventListener('click', (element)=>{
+    const filter = element.target.dataset.filter || element.target.parentNode.dataset.filter;
+    if(filter === undefined){
+        return;
+    }
+
+    const active = document.querySelector('.category__btn.active');
+    const target = element.target.nodeName === 'BUTTON' ? element.target : element.target.parentNode;
+    active.classList.remove('active');
+    target.classList.add('active');
+
+    worksProjects.classList.add('anim-out');
+    setTimeout(()=>{
+        projects.forEach((project)=>{
+            if(filter === '*' || filter === project.dataset.type){
+                project.classList.remove('invisible');
+            }
+            else{
+                project.classList.add('invisible');
+            }
+        })
+        worksProjects.classList.remove('anim-out');
+    }, 300);
+});
