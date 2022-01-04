@@ -479,6 +479,7 @@ p {
   content: "";
   display: block;
   position: relative;
+  margin: auto;
   margin-top: 4px;
   width: 72px;
   height: 2px;
