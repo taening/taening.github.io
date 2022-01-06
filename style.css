@@ -650,6 +650,38 @@ p {
   height: 48px;
 }
 
+@media screen and (max-width: 1000px) {
+  .about__awards {
+    margin: 8px;
+  }
+
+  .award {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .award__images {
+    margin: 0px;
+  }
+
+  .award__images > img {
+    width: 320px;
+    height: 200px;
+  }
+
+  .award__images > button {
+    line-height: 200px;
+  }
+
+  .award__contents {
+    text-align: center;
+  }
+
+  .award__contents .title {
+    padding: 4px 0px;
+  }
+}
+
 /* 0px ~ 768px Common Setting */
 @media screen and (max-width: 768px) {
   section {
