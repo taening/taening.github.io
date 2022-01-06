@@ -97,3 +97,32 @@ worksCategories.addEventListener('click', (element)=>{
         worksProjects.classList.remove('anim-out');
     }, 300);
 });
+
+/* Image Change When Award Button Pressed */
+const awardButtonsList = document.querySelectorAll('.award__btns');
+const awardImagesList = document.querySelectorAll('.award__images');
+awardButtonsList.forEach((awardButtons, idx)=>{
+    awardButtons.addEventListener('click', (event)=>{
+        if(event.target.nodeName !== 'I' && event.target.nodeName !== 'BUTTON'){
+            return ;
+        }
+    
+        const target = event.target.nodeName === 'BUTTON' ? event.target : event.target.parentNode;
+        const visibleImage = awardImagesList[idx].getElementsByClassName('visible')[0];
+        visibleImage.classList.remove('visible');
+        if(awardButtons.firstElementChild === target){
+            if(visibleImage.previousElementSibling === null) {
+                awardImagesList[idx].lastElementChild.classList.add('visible');
+                return ;
+            }
+            visibleImage.previousElementSibling.classList.add('visible');
+        }
+        else {
+            if(visibleImage.nextElementSibling === null) {
+                awardImagesList[idx].firstElementChild.classList.add('visible');
+                return ;
+            }
+            visibleImage.nextElementSibling.classList.add('visible');
+        }
+    });
+});
