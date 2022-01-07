@@ -656,17 +656,22 @@ p {
     align-items: center;
   }
 
+  .award__btns {
+    width: 300px;
+    height: 200px;
+  }
+
+  .award__bttns > button {
+    line-height: 200px;
+  }
+
   .award__images {
     margin: 0px;
   }
 
   .award__images > img {
-    width: 320px;
+    width: 300px;
     height: 200px;
-  }
-
-  .award__images > button {
-    line-height: 200px;
   }
 
   .award__contents {
