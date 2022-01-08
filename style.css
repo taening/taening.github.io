@@ -436,11 +436,13 @@ p {
   background-color: var(--color-light-gray);
 }
 
+/*
 .skill__value {
-  width: 99%;
+  width: 50%;
   height: 7px;
   background-color: var(--color-orange);
 }
+*/
 
 /* My Works */
 .works__categories {
