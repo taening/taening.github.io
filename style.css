@@ -197,6 +197,7 @@ p {
   height: 250px;
   border-radius: 50%;
   border: 2px solid var(--color-white);
+  transform: rotate(12deg);
 }
 
 .home__avatar:hover {
