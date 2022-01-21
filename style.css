@@ -126,6 +126,18 @@ p {
   padding: 0px 12px;
 }
 
+.navbar__logo a {
+  display: flex;
+}
+
+.navbar__logo-img {
+  background-image: url(imgs/logo.png);
+  background-position: center;
+  background-size: cover;
+  width: 40px;
+  height: 40px;
+}
+
 .navbar__menu {
   display: flex;
   cursor: pointer;
