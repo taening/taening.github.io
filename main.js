@@ -101,30 +101,37 @@ worksCategories.addEventListener('click', (element)=>{
 /* Image Change When Award Button Pressed */
 const awardButtonsList = document.querySelectorAll('.award__btns');
 const awardImagesList = document.querySelectorAll('.award__images');
-awardButtonsList.forEach((awardButtons, idx)=>{
+awardButtonsList.forEach((awardButtons, idx) => {
     awardButtons.addEventListener('click', (event)=>{
         if(event.target.nodeName !== 'I' && event.target.nodeName !== 'BUTTON'){
             return ;
         }
     
         const target = event.target.nodeName === 'BUTTON' ? event.target : event.target.parentNode;
-        const visibleImage = awardImagesList[idx].getElementsByClassName('visible')[0];
+        const visibleImage = awardImagesList[idx].querySelector('.visible');
         visibleImage.classList.remove('visible');
         if(awardButtons.firstElementChild === target){
-            if(visibleImage.previousElementSibling === null) {
-                awardImagesList[idx].lastElementChild.classList.add('visible');
-                return ;
-            }
+            visibleImage.previousElementSibling === null? 
+            awardImagesList[idx].lastElementChild.classList.add('visible'):
             visibleImage.previousElementSibling.classList.add('visible');
         }
         else {
-            if(visibleImage.nextElementSibling === null) {
-                awardImagesList[idx].firstElementChild.classList.add('visible');
-                return ;
-            }
+            visibleImage.nextElementSibling === null?
+            awardImagesList[idx].firstElementChild.classList.add('visible'):
             visibleImage.nextElementSibling.classList.add('visible');
         }
     });
+});
+
+/* Image Change Auto */
+awardImagesList.forEach((awardImages) => {
+    setInterval(() => {
+        const awardImage = awardImages.querySelector('.visible');
+        awardImage.classList.remove('visible');
+        awardImage.nextElementSibling === null?
+        awardImages.firstElementChild.classList.add('visible'):
+        awardImage.nextElementSibling.classList.add('visible');
+    }, 7000);
 });
 
 /* Skills Percentage Bar Setting */
