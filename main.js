@@ -151,7 +151,7 @@ awardImagesList.forEach((awardImages) => {
 const percentageList = document.querySelectorAll('.skill__discription .percentage');
 const skillValueList = document.querySelectorAll('.skill__value');
 skillValueList.forEach((skillValue, idx) => {
-    skillValue.style.widfth = percentageList[idx].textContent;
+    skillValue.style.width = percentageList[idx].textContent;
     skillValue.style.height = "7px";
     skillValue.style.backgroundColor = "var(--color-orange)";
 });
