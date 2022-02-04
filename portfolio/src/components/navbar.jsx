@@ -4,12 +4,24 @@ import NavbarMenu from "./navbarMenu";
 class Navbar extends PureComponent {
   state = {
     menus: [
-      { dataLink: "#home", value: "Home" },
-      { dataLink: "#about", value: "About" },
-      { dataLink: "#skills", value: "Skills" },
-      { dataLink: "#works", value: "My Works" },
-      { dataLink: "#testimonials", value: "Testimonials" },
-      { dataLink: "#contact", value: "Contact" },
+      { dataLink: "#home", value: [<i className="fas fa-home"></i>, "Home"] },
+      { dataLink: "#about", value: [<i className="fas fa-user"></i>, "About"] },
+      {
+        dataLink: "#skills",
+        value: [<i className="fas fa-flask"></i>, "Skills"],
+      },
+      {
+        dataLink: "#works",
+        value: [<i className="fas fa-project-diagram"></i>, "My Works"],
+      },
+      {
+        dataLink: "#testimonials",
+        value: [<i className="fas fa-address-card"></i>, "Testimonials"],
+      },
+      {
+        dataLink: "#contact",
+        value: [<i className="fas fa-paper-plane"></i>, "Contact"],
+      },
     ],
   };
 
@@ -18,7 +30,6 @@ class Navbar extends PureComponent {
       <nav id="navbar">
         <a href="#">
           <div className="navbar__logo"></div>
-          <b>Paul</b>
         </a>
         <ul className="navbar__menu">
           {this.state.menus.map((menu) => {
