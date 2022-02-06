@@ -1,25 +1,29 @@
 import React, { Component } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "@fortawesome/fontawesome-free/js/all.js";
 
 import "./app.css";
-import Navbar from "./components/navbar";
-import Section from "./components/section";
-import Footer from "./components/footer";
+import Home from "./components/home/home";
+import About from "./components/about/about";
+import Skills from "./components/skills/skills";
+import Projects from "./components/projects/projects";
+import Testimonials from "./components/testimonials/testimonials";
+import Contact from "./components/contact/contact";
 
 class App extends Component {
-  state = {
-    id: ["home", "about", "skills", "works", "testimonials", "contact"],
-  };
-
   render() {
     return (
-      <>
-        <Navbar />
-        {this.state.id.map((id) => {
-          return <Section key={id} id={id} />;
-        })}
-        <Footer />
-      </>
+      <BrowserRouter>
+        <Routes>
+          <Route exact path={"/"} element={<Home />} />
+          <Route exact path={"/home"} element={<Home />} />
+          <Route exact path={"/about"} element={<About />} />
+          <Route exact path={"/skills"} element={<Skills />} />
+          <Route exact path={"/projects"} element={<Projects />} />
+          <Route exact path={"/testimonials"} element={<Testimonials />} />
+          <Route exact path={"/contact"} element={<Contact />} />
+        </Routes>
+      </BrowserRouter>
     );
   }
 }
