@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import styles from "./button.module.css";
+import styles from "./toggleButton.module.css";
 
 class ToggleButton extends Component {
   state = {
@@ -24,15 +24,15 @@ class ToggleButton extends Component {
     };
     const [leftIcon, rightIcon] = this.props.icon;
     return (
-      <div className={styles.button__container} onClick={this.handleClick}>
-        <div className={styles.left__image}>
+      <div className={styles.toggleButton} onClick={this.handleClick}>
+        <div className={styles.leftContainer}>
           <i className={leftIcon}></i>
         </div>
-        <div className={styles.right__image}>
+        <div className={styles.rightContainer}>
           <i className={rightIcon}></i>
         </div>
         <div
-          className={styles.button}
+          className={styles.toggle}
           style={this.state.checked ? lightStyle : darkStyle}
         ></div>
       </div>

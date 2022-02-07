@@ -1,27 +1,5 @@
-/* HamburgerButton */
-.hamburgerBar {
-  /* position */
-  position: absolute;
-  right: 12px;
-  top: 12px;
-  display: none;
-  flex-direction: column;
-}
-
-.hamburgerBar > span {
-  /* position */
-  margin: 2px 0px;
-  transition: all var(--animation-duration) ease-out;
-
-  /* design */
-  width: 30px;
-  height: 5px;
-  border-radius: var(--size-border-radius);
-  background-color: white;
-}
-
-/* Navigation Toggle Button */
-.button__container {
+/* Toggle Button */
+.toggleButton {
   /* position */
   position: absolute;
   right: 12px;
@@ -35,8 +13,8 @@
   border-radius: 24px;
 }
 
-.left__image,
-.right__image {
+.leftContainer,
+.rightContainer {
   /* design */
   width: 24px;
   height: 24px;
@@ -44,7 +22,7 @@
   line-height: 27px;
 }
 
-.button__container .button {
+.toggle {
   /* position */
   position: absolute;
   left: 1px;
