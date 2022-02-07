@@ -15,18 +15,18 @@
   font-weight: var(--font-weight-semi-bold);
 }
 
-.footer__link {
+.siteLink {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.footer__link > * {
+.siteLink > * {
   padding: 0px 6px;
   font-size: 21px;
 }
 
-.link__logo {
+.tistoryLogo {
   width: 21px;
   height: 21px;
   background: url("../../../../public/imgs/footer/tistory_icon.png");
